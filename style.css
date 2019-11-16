@@ -132,7 +132,6 @@ img.bosmat {
     /* top: calc(50vh - 346px / 2 - 25px);
     right: calc(50vw - 773px / 2);
     left: calc(50vw - 773px / 2); */
-    max-height: 100%;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -141,7 +140,6 @@ img.bosmat {
     cursor: pointer;
     transform: scale(0.75, 0.75);
     transition: transform .25s ease;
-    height: 50%;
     background-color: limegreen;
 }
 
