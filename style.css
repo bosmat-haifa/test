@@ -174,7 +174,7 @@ img.bosmat {
 
 .pages {
     top: 50px;
-    margin: 50px calc(50vw / 2);
+/*     margin: 50px calc(50vw / 2); */
     z-index: 1;
     background-color: orangered;
     display: flex;
@@ -198,7 +198,7 @@ img.bosmat {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px; /* the font only affects the sign up button why */
     cursor: pointer;
-    margin: 10px;
+/*     margin: 10px; */
     position: relative;
     overflow: hidden;
     top: 35px;
@@ -217,7 +217,7 @@ img.bosmat {
     font-weight: 500;
     background: transparent;
     border: none;
-    margin: 0 auto 0;
+/*     margin: 0 auto 0; */
     display: inline-block;
     font-size: 20px;
     outline: none;
@@ -234,7 +234,7 @@ img.bosmat {
         bottom: 0;
         left: 0;
         right: 0;
-        margin: 0 auto;
+/*         margin: 0 auto; */
         width: 0;
         transition: 0.3s;
 }
