@@ -124,7 +124,7 @@ body {
 
 img.bosmat {
     z-index: 2;
-    position: absolute;
+    position: relative;
     margin: calc((100vh - 346px) / 2) calc((100vw - 773px) / 2);
     /* top: calc(50vh - 346px / 2 - 25px);
     right: calc(50vw - 773px / 2);
