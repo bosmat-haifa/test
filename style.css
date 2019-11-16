@@ -173,7 +173,6 @@ img.bosmat {
 
 
 .pages {
-    position: absolute;
     top: 50px;
     margin: 50px calc(50vw / 2);
     z-index: 1;
