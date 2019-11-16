@@ -141,7 +141,6 @@ img.bosmat {
     cursor: pointer;
     transform: scale(0.75, 0.75);
     transition: transform .25s ease;
-    width: 50%;
     height: 50%;
     background-color: limegreen;
 }
