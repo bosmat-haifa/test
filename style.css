@@ -42,10 +42,13 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Will make column of children elements (button div and image ) */
+    align-items: center; /* Will center elements horizontally when COLUMN direction is applied*/
 }
 
 .fullscreen-video-wrap {
@@ -129,10 +132,6 @@ img.bosmat {
     /* top: calc(50vh - 346px / 2 - 25px);
     right: calc(50vw - 773px / 2);
     left: calc(50vw - 773px / 2); */
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
     max-height: 100%;
     user-select: none;
     -moz-user-select: none;
@@ -142,6 +141,9 @@ img.bosmat {
     cursor: pointer;
     transform: scale(0.75, 0.75);
     transition: transform .25s ease;
+    width: 50%;
+    height: 50%;
+    background-color: limegreen;
 }
 
 .bosmat:hover {
@@ -175,6 +177,10 @@ img.bosmat {
     top: 50px;
     margin: 50px calc(50vw / 2);
     z-index: 1;
+    background-color: orangered;
+    display: flex;
+    flex-direction: row; /* Will make row of children elements (all buttons) */
+    justify-content: center; /* Will center all buttons horizontally when ROW direction is applied */
 }
 
 /* where are the buttons g*/
