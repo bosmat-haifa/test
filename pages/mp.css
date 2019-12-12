@@ -4,7 +4,7 @@ body {
     background-image: radial-gradient(circle, #1f1f1f, #1b1b1b, #1a1a1a, #171717, #151515, #121212, #111111, #0e0e0e);
 }
 
-@media (max-width: 1536) {
+@media screen and (max-width: 1920px) {
     #container {
         display: flex;
         margin: calc(50vh - 250px) auto 0 auto;
@@ -100,7 +100,7 @@ body {
     }
 }
 
-@media (max-width: 1920) {
+@media screen and (max-width: 1536px) {
     #container {
         display: flex;
         margin: calc(50vh - 250px) auto 0 auto;
