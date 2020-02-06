@@ -128,7 +128,7 @@
                 isScrolling = true;
                 setTimeout(() => {
                     isScrolling = false;
-                }, 500);
+                }, 1000);
             } else if (e.deltaY > 0 && currentSec < sections.length - 1 && !isScrolling) {
                 document.getElementById(sections[++currentSec]).scrollIntoView({
                     behavior: "smooth",
@@ -138,7 +138,7 @@
                 isScrolling = true;
                 setTimeout(() => {
                     isScrolling = false;
-                }, 500);
+                }, 1000);
             }
         });
     </script>
