@@ -12,12 +12,14 @@ body {
     #maincontainer {
         position: relative;
         display: flex;
-        margin: calc(50vh - 250px) auto 0 auto;
-        padding: 0 100px;
+        padding: 0 100px; 
+        top: 180px;
+        left: 126px;
         align-items: center;
     }
 
     .container {
+        padding-left: 50px;
         position: relative;
         width: 426px;
         height: 600px;
@@ -31,7 +33,7 @@ body {
         border-radius: 35px;
         cursor: default;
         transform-style: preserve-3d;
-        transition: transform 1.5s 0.2s ease-in-out;
+        transition: transform 1s 0.2s ease-in-out;
     }
 
     .cardleft:hover {
@@ -69,7 +71,6 @@ body {
         background-color: white;
         color: black;
     }
-    
     .cardleft > .cardback {
         transform: rotateY(180deg);
     }
@@ -94,9 +95,10 @@ body {
         color: white;
     }
     .cardfront > p {
-        position: relative;
+        position: absolute ;
         z-index: 1;
-        width: 100%;
+        right: 50px;
+        width: 340px;
         margin-top: 326px; /* top right bottom left */
         direction: rtl;
         color: white;

@@ -9,36 +9,18 @@ body {
     line-height: 1.5;
     color: #333;
     overflow: hidden;
-}
-
-#popup {
-    position: absolute;
-    z-index: 10;
-    display: none;
-    width: 100%;
     height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(79, 80, 102, 1) 14%, rgba(40, 42, 54, 1) 65%, rgba(19, 20, 27, 1) 100%);
 }
 
-#popup * {
-    z-index: inherit;
-    border: none;
-}
 
 #v-header {
     height: 100vh;
     display: flex;
     color: #fff;
-}
-
-.background {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: radial-gradient(circle, #2e2e2e, #222222, #1a1a1a, #171717, #151515, #121212, #111111, #0e0e0e);
-
 }
 
 .container {
@@ -62,7 +44,7 @@ body {
     min-height: 100%;
 }
 
-#header-overlay{
+#header-overlay {
     height: 100vh;
     width: 100vw;
     position: absolute;
@@ -74,8 +56,10 @@ body {
 .header-content {
     z-index: 2;
     position: absolute;
-    right: 170px; /* right tune */
-    top: 24%; /* top tune */
+    right: 170px;
+    /* right tune */
+    top: 24%;
+    /* top tune */
 }
 
 .bosmatlogo {
@@ -95,10 +79,10 @@ body {
 .header-content p {
     font-size: 26px;
     text-shadow:
-    -0.3px -0.3px 0 #000,
-    0.2px -0.3px 0 #000,
-    -0.3px 0.3px 0 #000,
-    0.3px 0.3px 0 #000;  
+        -0.3px -0.3px 0 #000,
+        0.2px -0.3px 0 #000,
+        -0.3px 0.3px 0 #000,
+        0.3px 0.3px 0 #000;
     padding-bottom: 2rem;
     text-align: right;
 }
@@ -124,28 +108,32 @@ body {
 
 img.bosmat {
     z-index: 2;
-    grid: initial;
-    margin: calc((100vh - 346px) / 2) calc((100vw - 773px) / 2);
-    /* top: calc(50vh - 346px / 2 - 25px);
+    position: absolute;
+    top: calc(50vh - 346px / 2 - 15px);
     right: calc(50vw - 773px / 2);
-    left: calc(50vw - 773px / 2); */
+    /* left: calc(50vw - 773px / 2); */
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    max-height: 100%;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     cursor: pointer;
-    transform: scale(0.75, 0.75);
-    transition: transform .25s ease;
+    transform: scale(0.95, 0.95);
+    transition: transform .25s ease-in-out, z-index 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .bosmat:hover {
-    transform: scale(1);
+    transform: scale(1.15);
+}
+
+img.hidelogo {
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 /*img.straight_finger {
@@ -177,6 +165,7 @@ img.bosmat {
     top: 5%;
     width: 100%;
     z-index: 1;
+    font-size: 36px;
 }
 
 /* where are the buttons g*/
@@ -186,38 +175,41 @@ img.bosmat {
     color: white;
     /* margin-right: 25px; */
     vertical-align: middle;
+    font-size: 28px;
 }
 
 .btn {
     border: none;
     background: none;
-    padding: 10px 22px;
+    padding: 10px 24px;
+    /* was 10px 22px */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px; /* the font only affects the sign up button why */
+    font-size: inherit;
     cursor: pointer;
     margin: 10px 0;
     position: relative;
     overflow: hidden;
     top: 35px;
-    left: 25px; /* nah dude the video so disturbing wait let me try to slow it */
+    left: 25px;
 }
 
 .btn4 {
     border: white 2px solid;
     border-radius: 100px;
-    padding: 0.6em 1.75em;
+    padding: 0.5em 0.840em;
+    font-weight: 35px 0;
 }
 
 .btn:not(.btn4) {
     background-color: none;
     overflow: visible;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
     background: transparent;
     border: none;
     margin: 0 auto 0;
     display: inline-block;
-    font-size: 20px;
+    font-size: inherit;
     outline: none;
     position: relative;
     transition: 0.3s;
@@ -256,11 +248,12 @@ img.bosmat {
     transition: right 0.3s, left 0.3s, width 0.3s;
 }
 
-.btn:not(.btn4):hover > ul {
+.btn:not(.btn4):hover>ul {
     left: 0%;
     right: 0%;
     width: 100%;
 }
+
 .btn4::before {
     content: "";
     position: absolute;
@@ -276,53 +269,88 @@ img.bosmat {
     position: fixed;
     bottom: 30px;
     left: 50%;
-    margin-left:-20px;
+    margin-left: -20px;
     width: 40px;
     height: 40px;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
     background-size: contain;
-    
-  }
-  
-  .bounce {
-      -webkit-animation: bounce 2s infinite;
-      animation: bounce 2s infinite;
-  }
-  
-  /* Scroll down indicator (bouncing) */
-  @-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -webkit-transform: translateY(0); }
+
+}
+
+.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
     40% {
-      -webkit-transform: translateY(-30px); }
+        -webkit-transform: translateY(-30px);
+    }
+
     60% {
-      -webkit-transform: translateY(-15px); } }
-  @-moz-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -moz-transform: translateY(0); }
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@-moz-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+
     40% {
-      -moz-transform: translateY(-30px); }
+        -moz-transform: translateY(-30px);
+    }
+
     60% {
-      -moz-transform: translateY(-15px); } }
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0); }
+        -moz-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
     40% {
-      -webkit-transform: translateY(-30px);
-      -moz-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-      -o-transform: translateY(-30px);
-      transform: translateY(-30px); }
+        -webkit-transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -o-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
     60% {
-      -webkit-transform: translateY(-15px);
-      -moz-transform: translateY(-15px);
-      -ms-transform: translateY(-15px);
-      -o-transform: translateY(-15px);
-      transform: translateY(-15px); } }
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -o-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
 
 .btn4::after {
     content: "";
@@ -365,6 +393,11 @@ transform: scale(1.25);
     font-size: 24px;
 }
 
+#sectionA {
+    background-color: white;
+    color: black;
+}
+
 #sectionB {
     background: #333;
     color: #fff;
@@ -379,19 +412,89 @@ transform: scale(1.25);
     position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
-    width: auto; 
-    height: auto; 
+    width: auto;
+    height: auto;
     z-index: -100;
     background-size: cover;
     overflow: hidden;
 }
 
+/* starts here */
 
-@media(max-width:960px){
-    .container{
-      padding-right: 3rem;
-      padding-left: 3rem;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body.light {
+    background: linear-gradient(135deg, rgba(232, 249, 255, 1) 14%, rgba(182, 210, 219, 1) 54%, rgba(129, 167, 179, 1) 100%);
+    color: black;
+}
+
+#div {
+    position: absolute;
+    top: 11.5%;
+    left: 160px;
+    /* it had problesm with #pages (100vw) because it was in its area so i made it in a higher z index, anyway call me when you are back */
+    z-index: 2;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 39px;
+    width: 75px;
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 33px;
+    width: 33px;
+    transform: translateX(36px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(0px);
+}
+
+
+.fa-moon {
+    color: #0f84f1;
+    font-size: 26px;
+}
+
+.fa-sun {
+    color: #bfbfbf;
+    font-size: 26px
+}
+
+/* ends here */
+
+
+
+
+
+
+
+@media(max-width:960px) {
+    .container {
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 }

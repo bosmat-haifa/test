@@ -1,109 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="style.css">
-        <title>BoSMAT</title>
-    </head>
-    <body>
-        
-        <style type="text/css">
 
-        
-      
-        </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>בסמת מופת</title>
+</head>
 
-        <section id="v-header" class="container">
-            <div class="background" width="1920px" height="1080px"></div>
-            <!-- <div class="fullscreen-video-wrap">
-                <video src="code.mp4" autoplay loop class="videoInsert"><video>
-            </div>
-            <div id="popup">
-                <video src="code.mp4" id="popupVideo" autoplay loop>
-                    <div id="popupOverlay">
-                        <a id="popupBack">חזור</a>
-                <p id="popupText">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus alias maxime quod doloribus accusantium voluptatem suscipit sed dolore qui fuga similique laboriosam asperiores officiis ipsa, ex in earum eos quos!
-                        </p>
-                    </div>
-                </video>
-            </div> <-->
-            <div id="header-overlay"></div>
-            <div id="pages">
-                <button onclick="window.location.href = 'pages/lm.html';" class="btn btn3">
-                    למידה מרחוק
-                    <ul>
-                    </ul>
-                </button>
-                <button onclick="window.location.href = 'pages/mp.html';" class="btn btn2">
-                    מגמות ופרויקטים
-                    <ul>
-                    </ul>
-                </button>
-                <button onclick="window.location.href = 'pages/hl.html';" class="btn btn4">
-                    הרשמה לבית הספר
-                </button>
-                <button onclick="window.location.href = 'pages/about.html';" class="btn btn1">
-                    על בית הספר
-                    <ul>
-                    </ul>
-                </button>
-                <button onclick="window.location.href = 'page0.html';" class="btn btn0">
-                    עמוד הבית
-                    <ul>
-                    </ul>
-                </button>
-            </div>
-            <div class="arrow bounce">
+<body>
 
-            </div>
-            <img href="#" class="bosmat" src="bosmat.png" alt="bosmat logo" id="YOSHA">
-            
-        </section>
-        <section id="sectionA" class="section">
-                <div class="container">
-                <h1>Section A</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis  praesentium  maiores aperiam recusandae ullam nemo quo eligendi veritatis commodi    vel iste velit  voluptates voluptate itaque ratione optio sapiente quaerat unde    aliquam possimus     blanditiis, exercitationem rem consequatur! Culpa optio tempora   odit ipsa in sapiente   tempore asperiores maxime, ex nemo sequi!</p>
-            </div>
-        </section>
-            <section id="sectionB" class="section">
-                    <div class="container">
-                    <h1>Section B</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis      praesentium maiores aperiam recusandae ullam nemo quo eligendi veritatis commodi    vel     iste velit voluptates voluptate itaque ratione optio sapiente quaerat  unde aliquam  possimus blanditiis, exercitationem rem consequatur! Culpa optio   tempora odit ipsa   in sapiente tempore asperiores maxime, ex nemo sequi!</p>
-                </div>
-                </section>
-            <section id="sectionC" class="section">
-                <div class="container">
-                <h1>Section C</h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis      praesentium maiores aperiam recusandae ullam nemo quo eligendi veritatis commodi        vel iste velit voluptates voluptate itaque ratione optio sapiente quaerat  unde  aliquam possimus blanditiis, exercitationem rem consequatur! Culpa optio   tempora     odit ipsa in sapiente tempore asperiores maxime, ex nemo sequi!
-                    </p>
-                </div>
-            </section>
-            
-        
-            <script type="text/javascript">
+    <style type="text/css">
 
-                    const sections = ["v-header", "sectionA", "sectionB", "sectionC"];
-                    var currentSec = 0;
-                    var isScrolling = false;
-                    window.addEventListener("wheel", (e) => {
-                        if (e.deltaY < 0 && currentSec > 0 && !isScrolling) {
-                            document.getElementById(sections[--currentSec]).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-                            isScrolling = true;
-                            setTimeout(() => {
-                                isScrolling = false;
-                            }, 500);
-                        } else if (e.deltaY > 0 && currentSec < sections.length-1 && !isScrolling) {
-                            document.getElementById(sections[++currentSec]).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-                            isScrolling = true;
-                            setTimeout(() => {
-                                isScrolling = false;
-                            }, 500);
-                        }
-                    });
-            </script>
-    </body>
+
+
+    </style>
+
+    <section id="v-header" class="container">
+        <div id="div">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+        <div id="pages">
+            <button onclick="window.location.href = 'pages/lm.html';" class="btn btn3">
+                למידה מרחוק
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'pages/mp.html';" class="btn btn2">
+                מגמות ופרויקטים
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'pages/hl.html';" class="btn btn4">
+                הרשמה לבית הספר
+            </button>
+            <button onclick="window.location.href = 'pages/about.html';" class="btn btn1">
+                על בית הספר
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'page0.html';" class="btn btn0">
+                עמוד הבית
+                <ul>
+                </ul>
+            </button>
+        </div>
+        <div class="arrow bounce">
+
+        </div>
+        <img href="#" class="bosmat" src="bosmat.png" alt="bosmat logo" id="YOSHA">
+        <img href="#" class="bosmat hidelogo bosblack" src="bosmatblack.png" alt="bosmatblack logo" id="YOSHABLACK">
+    </section>
+    <section id="sectionA" class="section">
+        <div class="container">
+            <h1>Section A</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis praesentium maiores aperiam
+                recusandae ullam nemo quo eligendi veritatis commodi vel iste velit voluptates voluptate itaque ratione
+                optio sapiente quaerat unde aliquam possimus blanditiis, exercitationem rem consequatur! Culpa optio
+                tempora odit ipsa in sapiente tempore asperiores maxime, ex nemo sequi!</p>
+        </div>
+    </section>
+    <section id="sectionB" class="section">
+        <div class="container">
+            <h1>Section B</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis praesentium maiores aperiam
+                recusandae ullam nemo quo eligendi veritatis commodi vel iste velit voluptates voluptate itaque ratione
+                optio sapiente quaerat unde aliquam possimus blanditiis, exercitationem rem consequatur! Culpa optio
+                tempora odit ipsa in sapiente tempore asperiores maxime, ex nemo sequi!</p>
+        </div>
+    </section>
+    <section id="sectionC" class="section">
+        <div class="container">
+            <h1>Section C</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum omnis praesentium maiores aperiam
+                recusandae ullam nemo quo eligendi veritatis commodi vel iste velit voluptates voluptate itaque ratione
+                optio sapiente quaerat unde aliquam possimus blanditiis, exercitationem rem consequatur! Culpa optio
+                tempora odit ipsa in sapiente tempore asperiores maxime, ex nemo sequi!
+            </p>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        const chk = document.getElementById('chk');
+
+        chk.addEventListener('change', () => {
+            document.body.classList.toggle('light');
+
+            const YOSHA = document.getElementById("YOSHA");
+            const YOSHABLACK = document.getElementById("YOSHABLACK");
+
+            YOSHA.classList.toggle("hidelogo");
+            YOSHABLACK.classList.toggle("hidelogo");
+
+            const btnNot4 = document.getElementsByClassName("btn");
+            if (document.body.classList.contains("light")) {
+                for (const btn of btnNot4) {
+                    if (btn.classList.contains("btn4")) continue;
+                    btn.style.color = "black";
+                }
+            } else {
+                for (const btn of btnNot4) {
+                    if (btn.classList.contains("btn4")) continue;
+                    btn.style.color = "white";
+                }
+            }
+        });
+
+        const sections = ["v-header", "sectionA", "sectionB", "sectionC"];
+        var currentSec = 0;
+        var isScrolling = false;
+        window.addEventListener("wheel", (e) => {
+            if (e.deltaY < 0 && currentSec > 0 && !isScrolling) {
+                document.getElementById(sections[--currentSec]).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+                isScrolling = true;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 500);
+            } else if (e.deltaY > 0 && currentSec < sections.length - 1 && !isScrolling) {
+                document.getElementById(sections[++currentSec]).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+                isScrolling = true;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 500);
+            }
+        });
+    </script>
+</body>
+
 </html>
