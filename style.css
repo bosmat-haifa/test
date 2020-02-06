@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
@@ -13,7 +14,9 @@ body {
     width: 100vw;
     top: 0;
     left: 0;
-    background: linear-gradient(135deg, rgba(79, 80, 102, 1) 14%, rgba(40, 42, 54, 1) 65%, rgba(19, 20, 27, 1) 100%);
+    background: rgb(223,243,249);
+    background: linear-gradient(135deg, rgba(223,243,249,1) 0%, rgba(137,172,185,1) 100%);
+    /* background-image: linear-gradient(135deg, rgba(79, 80, 102, 1) 14%, rgba(40, 42, 54, 1) 65%, rgba(19, 20, 27, 1) 100%); */
 }
 
 
@@ -175,7 +178,7 @@ img.hidelogo {
     color: white;
     /* margin-right: 25px; */
     vertical-align: middle;
-    font-size: 28px;
+    font-size: 34px;
 }
 
 .btn {
@@ -230,7 +233,7 @@ img.hidelogo {
     width: 0;
 }
 
-.btn:not(.btn4) ul {
+.btn:not(.btn4)>ul {
     list-style-type: none;
     position: relative;
     border-radius: 15px;
@@ -267,6 +270,7 @@ img.hidelogo {
 
 .arrow {
     position: fixed;
+    z-index: 5;
     bottom: 30px;
     left: 50%;
     margin-left: -20px;
@@ -426,15 +430,33 @@ transform: scale(1.25);
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 body.light {
-    background: linear-gradient(135deg, rgba(232, 249, 255, 1) 14%, rgba(182, 210, 219, 1) 54%, rgba(129, 167, 179, 1) 100%);
     color: black;
+}
+
+.btn:not(.btn4)>ul.light {
+    background-color: black;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-image: linear-gradient(135deg, rgba(79, 80, 102, 1) 14%, rgba(40, 42, 54, 1) 65%, rgba(19, 20, 27, 1) 100%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidebackground {
+    opacity: 0;
 }
 
 #div {
     position: absolute;
-    top: 11.5%;
-    left: 160px;
-    /* it had problesm with #pages (100vw) because it was in its area so i made it in a higher z index, anyway call me when you are back */
+    top: 12.5%;
+    left: 115px;
     z-index: 2;
 }
 
@@ -480,7 +502,7 @@ body.light {
 }
 
 .fa-sun {
-    color: #bfbfbf;
+    color: #d4e91d;
     font-size: 26px
 }
 
@@ -488,13 +510,117 @@ body.light {
 
 
 
+@media(max-width:1768px) {
+    #div {
+        top: 12%;
+        left: 120px;
+    }
 
-
-
-
-@media(max-width:960px) {
     .container {
         padding-right: 3rem;
-        padding-left: 3rem;
+        padding-left: 0px;
+    }
+
+    #pages button {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:1680px) {
+    #div {
+        top: 12%;
+        left: 100px;
+    }
+    .container {
+        padding-right: 3rem;
+        padding-left: 0px;
+    }
+}
+
+@media(max-width:1600px) {
+    #div {
+        top: 12%;
+        left: 75px;
+    }
+    .container {
+        padding-right: 3rem;
+        padding-left: 0px;
+    }
+}
+
+@media(max-height:900px) {
+    #div {
+        top: 13%;
+        left: 75px;
+    }
+    .container {
+        padding-right: 3rem;
+        padding-left: 0px;
+    }
+}
+
+@media(max-width:1440px) {
+    #div {
+        top: 30px;
+        left: 40px;
+    }
+    .container {
+        padding-right: 3rem;
+        padding-left: 0px;
+    }
+}
+
+@media(max-width:1366px) {
+    img.bosmat {
+        top: calc(50vh - 346px / 2 + 30px);
+        right: calc(50vw - 773px / 2);
+    }
+}
+
+@media(max-width:1280px) {
+    img.bosmat {
+        top: calc(50vh - 346px / 2 + 30px);
+        right: calc(50vw - 773px / 2);
+        transform: scale(0.70, 0.70);
+    }
+
+    .bosmat:hover {
+        transform: scale(0.9);
+    }
+
+    #div {
+        top: 30px;
+        left: 120px;
+    }
+
+}
+
+@media(max-width:1176px) {
+    img.bosmat {
+        top: calc(50vh - 346px / 2 + 30px);
+        right: calc(50vw - 773px / 2);
+        transform: scale(0.50, 0.50);
+    }
+
+    .bosmat:hover {
+        transform: scale(0.7);
+    }
+
+    #div {
+        top: 30px;
+        left: 120px;
+    }
+
+    #pages button {
+        font-size: 20px;
+    }
+
+}
+
+
+@media(max-height:960px) {
+    .container {
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 }
