@@ -521,8 +521,8 @@ body.light {
 
 @media(max-width:1768px) {
     #div {
-        top: 95px;
-        left: 120px;
+        top: calc(50px * (1768 / 1920));
+        left: calc(95px * (994.5 / 1080));
     }
 
 }
