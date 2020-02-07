@@ -169,6 +169,7 @@ img.hidelogo {
     width: 100%;
     z-index: 1;
     font-size: 36px;
+    width: 100vw;
 }
 
 /* where are the buttons g*/

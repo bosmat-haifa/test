@@ -68,6 +68,14 @@ for (let i = 0; i < translators.length; i++) {
 value.onchange = function() {
     for (let i = 0; i < translators.length; i++) {
         var translator = translators[i].children;
-        translator[0].innerHTML = translator[values.indexOf(value.value)+1].innerHTML;
+        const index = values.indexOf(value.value)+1;
+        translator[0].innerHTML = translator[index].innerHTML;
+        if (index == 1) {
+            document.getElementById("pages").style.margin = "0 0 0 -3rem";
+        } else if (index == 2) {
+            document.getElementById("pages").style.margin = "0 0 0 -4rem";
+        } else if (index == 3) {
+            document.getElementById("pages").style.margin = "0 0 0 -6rem";
+        }
     }
 }
