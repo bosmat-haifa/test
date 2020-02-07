@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style type="text/css">
-
-    /* if body.en then p of hebrew display none */
-      body.en > p[lang=he] {
-        display: none;
-      }
-      body.he > p[lang=en] {
-        display: none;
-      }
-    </style>
   </head>
-  <body class="he">
-    <button onclick="document.body.className='he'">עברית</button>
-    <button onclick="document.body.className='en'">English</button>
-    <p lang="he">זה עברית</p>
-    <p lang="en">This is English</p>
+
+  <body>
+    <button onclick='changemetohebrew();'>עברית</button>
+    <button onclick='changemetoenglish();'>English</button>
+    <div id='parent_id'>
+      <p></p>
+      <p1>זה עברית</p1>
+      <p2>This is English</p2>
+    </div>
+
+    <script>
+      function changemetohebrew() {
+        var nodes = document.getElementById('parent_id').children;
+        for (var element of nodes) {
+          if (element.tagName.toLowerCase() != 'p') {
+            element.style.display = "none";
+          } else {
+            element.innerHTML = nodes[1].innerHTML;
+          }
+        }
+      }
+
+      function changemetoenglish() {
+        var nodes = document.getElementById('parent_id').children;
+        for (var element of nodes) {
+          if (element.tagName.toLowerCase() != 'p') {
+            element.style.display = "none";
+          } else {
+            element.innerHTML = nodes[2].innerHTML;
+          }
+        }
+      } // if english button clicked then p = This is English
+      // else p = זה עברית
+      changemetohebrew();
+    </script>
   </body>
-</html>
-</body>
 </html>

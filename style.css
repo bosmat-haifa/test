@@ -200,7 +200,6 @@ img.hidelogo {
     border: white 2px solid;
     border-radius: 100px;
     padding: 0.5em 0.840em;
-    font-weight: 35px 0;
 }
 
 .btn:not(.btn4) {
@@ -455,8 +454,8 @@ body.light {
 
 #div {
     position: absolute;
-    top: 12.5%;
-    left: 115px;
+    top: 50px;
+    left: 95px;
     z-index: 2;
 }
 
@@ -509,6 +508,16 @@ body.light {
 /* ends here */
 
 
+#languages {
+    width: 100px;
+    height: 34px;
+    z-index: 1;
+    position: absolute;
+    right: 80px;
+    top: 50px;
+}
+
+
 
 @media(max-width:1768px) {
     #div {
@@ -516,111 +525,10 @@ body.light {
         left: 120px;
     }
 
-    .container {
-        padding-right: 3rem;
-        padding-left: 0px;
-    }
-
-    #pages button {
-        font-size: 28px;
-    }
 }
-
-@media(max-width:1680px) {
-    #div {
-        top: 12%;
-        left: 100px;
-    }
-    .container {
-        padding-right: 3rem;
-        padding-left: 0px;
-    }
-}
-
-@media(max-width:1600px) {
-    #div {
-        top: 12%;
-        left: 75px;
-    }
-    .container {
-        padding-right: 3rem;
-        padding-left: 0px;
-    }
-}
-
-@media(max-height:900px) {
-    #div {
-        top: 13%;
-        left: 75px;
-    }
-    .container {
-        padding-right: 3rem;
-        padding-left: 0px;
-    }
-}
-
-@media(max-width:1440px) {
-    #div {
-        top: 30px;
-        left: 40px;
-    }
-    .container {
-        padding-right: 3rem;
-        padding-left: 0px;
-    }
-}
-
-@media(max-width:1366px) {
-    img.bosmat {
-        top: calc(50vh - 346px / 2 + 30px);
-        right: calc(50vw - 773px / 2);
-    }
-}
-
-@media(max-width:1280px) {
-    img.bosmat {
-        top: calc(50vh - 346px / 2 + 30px);
-        right: calc(50vw - 773px / 2);
-        transform: scale(0.70, 0.70);
-    }
-
-    .bosmat:hover {
-        transform: scale(0.9);
-    }
-
-    #div {
-        top: 30px;
-        left: 120px;
-    }
-
-}
-
-@media(max-width:1176px) {
-    img.bosmat {
-        top: calc(50vh - 346px / 2 + 30px);
-        right: calc(50vw - 773px / 2);
-        transform: scale(0.50, 0.50);
-    }
-
-    .bosmat:hover {
-        transform: scale(0.7);
-    }
-
-    #div {
-        top: 30px;
-        left: 120px;
-    }
-
-    #pages button {
-        font-size: 20px;
-    }
-
-}
-
-
 @media(max-height:960px) {
     .container {
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 }
