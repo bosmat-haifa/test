@@ -530,7 +530,7 @@ body.light {
 
 
 }
-@media(max-height:960px) {
+@media(max-height:884px) {
     .container {
         padding-right: 3rem;
         padding-left: 3rem;
