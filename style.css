@@ -164,7 +164,7 @@ img.hidelogo {
 #pages {
     position: absolute;
     display: block;
-    margin: 0 -40px;
+    margin: 0 -3rem;
     top: 5%;
     width: 100%;
     z-index: 1;
@@ -519,11 +519,15 @@ body.light {
 
 
 
-@media(max-width:1768px) {
+@media(max-width:1536px) {
+    #pages {
+        margin-left: -3rem;
+    }
     #div {
         top: calc(50px * (1768 / 1920));
         left: calc(95px * (994.5 / 1080));
     }
+
 
 }
 @media(max-height:960px) {
