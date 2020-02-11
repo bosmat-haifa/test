@@ -455,8 +455,8 @@ body.light {
 
 #div {
     position: absolute;
-    top: 50px;
-    left: 95px;
+    top: 30px;
+    left: 33%;
     z-index: 2;
 }
 
@@ -510,15 +510,52 @@ body.light {
 
 
 #languages {
-    width: 100px;
-    height: 34px;
+    text-align: center;
+    width: 98px;
+    height: 60px;
     z-index: 1;
     position: absolute;
-    right: 80px;
-    top: 50px;
+    right: 29%;
+    top: 30px;
+    list-style-type: none;
+    overflow-y: hidden;
+    overflow-x: visible;
+    margin: 0;
+    padding: 5px;
+    background-color: rgb(96, 129, 148);
+    border-radius: 20px;
+    transition: height 0.4s ease-in-out
+ }
+#languages:hover {
+    height: 174.5px;
+}
+#languages li {
+    color: black;
+    cursor: pointer;
+}
+#languages li:first-child {
+    cursor: default;
+    overflow-x: visible;
+}
+#languages li:first-child:before {
+    content: "";
+    display: inline-block;
+    border-top: 8px solid white;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    position: absolute;
+    top: 25px;
+    left: 7px;
 }
 
-
+#languages li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 
 @media(max-width:1536px) {
     #pages{

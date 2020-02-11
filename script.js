@@ -1,3 +1,7 @@
+/*
+    light and dark mode buttons shit
+*/
+
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
@@ -24,6 +28,10 @@ chk.addEventListener('change', () => {
         }
     }
 });
+
+/*
+    smooth scrolling
+*/
 
 const sections = ["v-header", "sectionA", "sectionB", "sectionC"];
 var currentSec = 0;
@@ -52,9 +60,13 @@ window.addEventListener("wheel", (e) => {
     }
 });
 
-const value = document.getElementById("languages");
+/*
+    languages shit
+*/
+
 const translators = document.getElementsByClassName("translator");
-const values = ["hebrew", "english", "russian"];
+
+
 for (let i = 0; i < translators.length; i++) {
     var translator = translators[i].children;
     for (const child of translator) {
@@ -65,17 +77,54 @@ for (let i = 0; i < translators.length; i++) {
         }
     }
 }
-value.onchange = function() {
+
+function hebrew() {
     for (let i = 0; i < translators.length; i++) {
         var translator = translators[i].children;
-        const index = values.indexOf(value.value)+1;
-        translator[0].innerHTML = translator[index].innerHTML;
-        if (index == 1) {
-            document.getElementById("pages").style.margin = "0 0 0 -3rem";
-        } else if (index == 2) {
-            document.getElementById("pages").style.margin = "0 0 0 -4rem";
-        } else if (index == 3) {
-            document.getElementById("pages").style.margin = "0 0 0 -6rem";
-        }
+        translator[0].innerHTML = translator[1].innerHTML;
+        document.getElementById("pages").style.margin = "0 0 0 -3rem";
     }
+    var languages = document.getElementById("languages");
+    var he = document.getElementById("hebrew");
+    var en = document.getElementById("english");
+    var ru = document.getElementById("russian");
+    languages.replaceChild(he, en);
+    languages.replaceChild(he, ru);
+    languages.appendChild(en);
+    languages.appendChild(ru);
+    // languages = document.getElementById("languages");
+}
+
+function english() {
+    for (let i = 0; i < translators.length; i++) {
+        var translator = translators[i].children;
+        translator[0].innerHTML = translator[2].innerHTML;
+        document.getElementById("pages").style.margin = "0 0 0 -4rem";
+    }
+    var languages = document.getElementById("languages");
+    var he = document.getElementById("hebrew");
+    var en = document.getElementById("english");
+    var ru = document.getElementById("russian");
+    languages.replaceChild(en, he);
+    languages.replaceChild(en, ru);
+    languages.appendChild(he);
+    languages.appendChild(ru);
+    // languages = document.getElementById("languages");
+}
+
+function russian() {
+    for (let i = 0; i < translators.length; i++) {
+        var translator = translators[i].children;
+        translator[0].innerHTML = translator[3].innerHTML;
+        document.getElementById("pages").style.margin = "0 0 0 -6rem";
+    }
+    var languages = document.getElementById("languages");
+    var he = document.getElementById("hebrew");
+    var en = document.getElementById("english");
+    var ru = document.getElementById("russian");
+    languages.replaceChild(ru, he);
+    languages.replaceChild(ru, en);
+    languages.appendChild(en);
+    languages.appendChild(he);
+    // languages = document.getElementById("languages");
 }

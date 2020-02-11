@@ -67,22 +67,22 @@
                 <ul>
                 </ul>
             </button>
-            <button onclick="window.location.href = 'page0.html';" class="btn btn0">
+            <button onclick="window.location.href = 'index.html';" class="btn btn0">
                 <div class="translator">
                     <p>עמוד הבית</p>
                     <p1>עמוד הבית</p1>
                     <p2>Home page</p2>
                     <p3>Главная страница</p3>
                 </div>
-                <ul>
+                <ul style="width: 100%;left: 0;right: 0;">
                 </ul>
             </button>
         </div>
-        <select name="languages" id="languages">
-            <option value="hebrew">עברית</option>
-            <option value="english">English</option>
-            <option value="russian">Русский</option>
-        </select>
+        <ul name="languages" id="languages">
+            <li id="hebrew"><a onclick="hebrew();"><img src="israel.png" alt="Flag of Israel"></a></li>
+            <li id="english"><a onclick="english();"><img src="us.png" alt="Flag of USA"></a></li>
+            <li id="russian"><a onclick="russian();"><img src="russia.png" alt="Flag of Russia"></a></li>
+        </ul>
         <div class="arrow bounce">
 
         </div>
