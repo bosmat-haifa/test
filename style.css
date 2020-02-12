@@ -112,8 +112,8 @@ body {
 img.bosmat {
     z-index: 2;
     position: absolute;
-    top: calc(50vh - 346px / 2 - 15px);
-    right: calc(50vw - 773px / 2);
+    top: calc(50vh - 346px / 2 );
+    right: calc(50vw - 773px / 2 );
     /* left: calc(50vw - 773px / 2); */
     max-width: 100%;
     max-height: 100%;
@@ -455,8 +455,8 @@ body.light {
 
 #div {
     position: absolute;
-    top: 30px;
-    left: 33%;
+    top: calc(3% + 10px);
+    left: calc(3% + 13px);
     z-index: 2;
 }
 
@@ -515,8 +515,8 @@ body.light {
     height: 60px;
     z-index: 1;
     position: absolute;
-    right: 29%;
-    top: 30px;
+    right: 3%;
+    top: 3%;
     list-style-type: none;
     overflow-y: hidden;
     overflow-x: visible;
