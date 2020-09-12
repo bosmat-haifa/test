@@ -112,8 +112,8 @@ body {
 img.bosmat {
     z-index: 2;
     position: absolute;
-    top: calc(50vh - 346px / 2 );
-    right: calc(50vw - 773px / 2 );
+    top: calc(50vh - 346px / 2 - 15px);
+    right: calc(50vw - 773px / 2);
     /* left: calc(50vw - 773px / 2); */
     max-width: 100%;
     max-height: 100%;
@@ -455,8 +455,8 @@ body.light {
 
 #div {
     position: absolute;
-    top: calc(3% + 10px);
-    left: calc(3% + 13px);
+    top: 50px;
+    left: 95px;
     z-index: 2;
 }
 
@@ -511,23 +511,20 @@ body.light {
 
 #languages {
     text-align: center;
-    width: 98px;
-    height: 60px;
+    width: 92px;
+    height: 50px;
     z-index: 1;
     position: absolute;
-    right: 3%;
-    top: 3%;
+    right: 80px;
+    top: 50px;
     list-style-type: none;
     overflow-y: hidden;
     overflow-x: visible;
     margin: 0;
-    padding: 5px;
-    background-color: #608194;
-    border-radius: 20px;
-    transition: height 0.4s ease-in-out
- }
+    padding: 0;
+}
 #languages:hover {
-    height: 174.5px;
+    height: calc(50px * 4);
 }
 #languages li {
     color: black;
@@ -537,7 +534,7 @@ body.light {
     cursor: default;
     overflow-x: visible;
 }
-#languages li:first-child:before {
+#selected::before {
     content: "";
     display: inline-block;
     border-top: 8px solid white;
@@ -548,13 +545,13 @@ body.light {
     vertical-align: middle;
     position: absolute;
     top: 25px;
-    left: 7px;
+    left: 0;
 }
 
-#languages li img {
+
+ul#languages li img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
 }
 
 @media(max-width:1536px) {
@@ -565,29 +562,9 @@ body.light {
         font-size: 28px;
     }
     #div {
-        top: calc(50px * (1768 / 1vw));
-        left: calc(95px * (994.5 / 1vh));
+        top: calc(50px * (1768 / 1920));
+        left: calc(95px * (994.5 / 1080));
     }
 
 
-}
-@media(max-width: 1280px) {
-    img.bosmat {
-        transform: scale(0.75, 0.75);
-    }
-    .bosmat:hover {
-        transform: scale(0.9);
-    }
-    #pages button{
-        font-size: 24px;
-    }
-    #div {
-        top: calc(50px * (1768 / 1vw));
-        left: calc(95px * (994.5 / 1vh));
-    }
-}
-@media(max-width: 1024px) {
-    #pages button{
-        font-size: 20px;
-    }
 }
