@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>בסמת מופת</title>
+</head>
+
+<body class="he">
+
+    <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
+
+    <section id="v-header" class="container">
+        <div class="background"></div>
+        <div id="div">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+        <div id="pages">
+            <button onclick="window.location.href = 'pages/lm.html';" class="btn btn3">
+                <div class="translator">
+                    <p>למידה מרחוק</p>
+                    <p1>למידה מרחוק</p1>
+                    <p2>Distance education</p2>
+                    <p3>Обучение с дома</p3>
+                </div>
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'pages/mp.html';" class="btn btn2">
+                <div class="translator">
+                    <p>מגמות ופרויקטים</p>
+                    <p1>מגמות ופרויקטים</p1>
+                    <p2>Trends and Projects</p2>
+                    <p3>Тенденции и Проекты</p3>
+                </div>
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'pages/register.html'" class="btn btn4">
+                <div class="translator">
+                    <p>הרשמה לבית הספר</p>
+                    <p1>הרשמה לבית הספר</p1>
+                    <p2>Registration for the school</p2>
+                    <p3>Регистрация в школу</p3>
+                </div>
+            </button>
+            <button onclick="window.location.href = 'pages/about.html';" class="btn btn1">
+                <div class="translator">
+                    <p>על בית הספר</p>
+                    <p1>על בית הספר</p1>
+                    <p2>About the school</p2>
+                    <p3>О школе</p3>
+                </div>
+                <ul>
+                </ul>
+            </button>
+            <button onclick="window.location.href = 'index.html';" class="btn btn0">
+                <div class="translator">
+                    <p>עמוד הבית</p>
+                    <p1>עמוד הבית</p1>
+                    <p2>Home page</p2>
+                    <p3>Главная страница</p3>
+                </div>
+                <ul style="width: 100%;left: 0;right: 0;">
+                </ul>
+            </button>
+        </div>
+        <ul name="languages" id="languages">
+            <li id="hebrew"><a onclick="hebrew();"><img src="israel.png" alt="Flag of Israel"></a></li>
+            <li id="english"><a onclick="english();"><img src="us.png" alt="Flag of USA"></a></li>
+            <li id="russian"><a onclick="russian();"><img src="russia.png" alt="Flag of Russia"></a></li>
+        </ul>
+        
+        <img href="#" class="bosmat" src="bosmat.png" alt="bosmat logo" id="YOSHA">
+        <img href="#" class="bosmat hidelogo bosblack" src="bosmatblack.png" alt="bosmatblack logo" id="YOSHABLACK">
+    </section>
+    <script>
+        window.addEventListener("load", () => {
+            var wrapper = document.getElementById("wrapper");
+            wrapper.setAttribute("class", "wrapperfadeout");
+            setTimeout(() => {
+                wrapper.remove();
+            }, 2500);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
