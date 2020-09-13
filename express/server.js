@@ -6,11 +6,11 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const router = express.Router();
-// router.get('/', (req, res) => {
-//   res.writeHead(200, { 'Content-Type': 'text/html' });
-//   res.write('<h1>Hello from Express.js!</h1>');
-//   res.end();
-// });
+router.get('/', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>what are you doing here</h1>');
+  res.end();
+});
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
@@ -18,19 +18,12 @@ router.post('/', (req, res) => res.json({ postBody: req.body }));
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
-// app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
-// app.get('/signup', (req, res) => res.sendFile(__dirname, '../test/signup.html'));
-
-if (req.url === "/") {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.sendFile(__dirname, '../index.html');
-} else if (req.url === "/signup") {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.sendFile(__dirname, '../test/signup.html');
-} else {
-  res.writeHead(404, { "Content-Type": "text/plain" });
-  res.end("404 error! File not found.");
-}
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+router.get('*', (req, res) => {
+  res.writeHead(400, { 'Content-Type': 'text/html' });
+  res.write('<h3>404 PAGE NOT FOUND</h3>');
+  res.end();
+});
 
 module.exports = app;
 module.exports.handler = serverless(app);
