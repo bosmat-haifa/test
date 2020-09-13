@@ -115,6 +115,15 @@
         </div>
     </section>
     <script src="script.js"></script>
+    <script>
+        window.addEventListener("load", () => {
+            var wrapper = document.getElementById("wrapper");
+            wrapper.setAttribute("class", "wrapperfadeout");
+            setTimeout(() => {
+                wrapper.remove();
+            }, 2500);
+        });
+    </script>
 </body>
 
 </html>
