@@ -18,11 +18,19 @@ router.post('/', (req, res) => res.json({ postBody: req.body }));
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
-app.get('/signup', (req, res) => res.sendFile(__dirname, '../test/signup.html'));
+// app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+// app.get('/signup', (req, res) => res.sendFile(__dirname, '../test/signup.html'));
 
-
-
+if (req.url === "/") {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.sendFile(__dirname, '../index.html');
+} else if (req.url === "/signup") {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.sendFile(__dirname, '../test/signup.html');
+} else {
+  res.writeHead(404, { "Content-Type": "text/plain" });
+  res.end("404 error! File not found.");
+}
 
 module.exports = app;
 module.exports.handler = serverless(app);
