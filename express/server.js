@@ -19,11 +19,6 @@ app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
-router.get('*', (req, res) => {
-  res.writeHead(404, { 'Content-Type': 'text/html' });
-  res.write('<h3>404 PAGE NOT FOUND</h3>');
-  res.end();
-});
 
 module.exports = app;
 module.exports.handler = serverless(app);

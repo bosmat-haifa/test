@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
     <h3>Sign up page!</h3>
+    <script>
+        window.addEventListener("load", () => {
+            var wrapper = document.getElementById("wrapper");
+            wrapper.setAttribute("class", "wrapperfadeout");
+            setTimeout(() => {
+                wrapper.remove();
+            }, 2500);
+        });
+    </script>
 </body>
 </html>
