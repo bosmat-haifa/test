@@ -19,7 +19,7 @@ app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
-app.use('/test', (req, res) => res.sendFile(path.join(__dirname, '../test.html')));
+app.use('/test', (req, res) => res.sendFile(path.join(__dirname, '../test/test.html')));
 
 module.exports = app;
 module.exports.handler = serverless(app);
