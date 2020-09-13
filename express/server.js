@@ -22,8 +22,10 @@ app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 app.use('/test', (req, res) => res.sendFile(path.join(__dirname, '../test/test.html'))); 
 
 app.use('/sign-up', (req, res) => {
-  res.sendFile(path.join(__dirname, '../pages/sign-up.html'));
+  res.sendFile(path.join(__dirname, '../sign-up.html'));
 });
+
+app.use(router);
 
 
 module.exports = app;
