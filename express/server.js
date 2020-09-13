@@ -20,11 +20,8 @@ app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 app.use('/test', (req, res) => res.sendFile(path.join(__dirname, '../test/test.html'))); 
+app.use('/signup', (req, res) => res.sendFile(path.join(__dirname, '../test/signup.html'))); 
 
-app.get('/sign-up', (req, res) => {
-  console.log(path.join(__dirname, '../pages/sign-up.html'));
-  res.sendFile(path.join(__dirname, '../pages/sign-up.html'));
-});
 
 app.use(router);
 
