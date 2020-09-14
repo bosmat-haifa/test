@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.get('/signup', (req, res) => res.sendFile(path.join(__dirname, 'signup.html')));
+app.get('/signup', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup.html')));
 
 app.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 
