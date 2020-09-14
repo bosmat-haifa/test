@@ -17,7 +17,11 @@ router.get('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
-router.get('/signup', (req, res) => res.json({test: req.originalUrl}));
+router.get('/signup', (req, res) => {
+  res.writeHead(200, {"Content-Type": "text/html"});
+  res.write(path.join(__dirname, "../signupdark.html"));
+  res.end();
+});
 
 
 app.use(bodyParser.json());
