@@ -19,7 +19,7 @@ router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 router.get('/signup', (req, res) => {
   res.writeHead(200, {"Content-Type": "text/html"});
-  res.write(path.join(__dirname, "../signupdark.html"));
+  res.sendFile(path.join(__dirname, "../signupdark.html"));
   res.end();
 });
 
