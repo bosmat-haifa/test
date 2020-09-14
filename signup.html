@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title> <!-- need to add the css things for the loading to work -->
-    <link rel="stylesheet" href="loadingscreen.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title> <!-- need to add the css things for the loading to work -->
+  <link rel="stylesheet" href="loadingscreen.css">
 </head>
+
 <body>
-    <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
-    <h3>Sign up page!</h3>
-    <script>
-        window.addEventListener("load", () => {
-            var wrapper = document.getElementById("wrapper");
-            wrapper.setAttribute("class", "wrapperfadeout");
-            setTimeout(() => {
-                wrapper.remove();
-            }, 2500);
-        });
-    </script>
+  <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
+  <h3>Sign up page!</h3>
+  <script>
+    window.addEventListener("load", () => {
+      var wrapper = document.getElementById("wrapper");
+      wrapper.setAttribute("class", "wrapperfadeout");
+      setTimeout(() => {
+        wrapper.remove();
+      }, 2500);
+    });
+
+  </script>
 </body>
+
 </html>
