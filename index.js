@@ -9,9 +9,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.get('/signup', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup.html')));
 
+app.engine('.haml', require('hamljs').renderFile);
 app.use((req, res,next)=>{
-    var hamlView = fs.readFileSync('pages/404.haml', 'utf8');
-    res.send(haml.render(hamlView));
+    res.status(404).sendFile(path.join(__dirname, 'pages/404.haml'));
  });
 
 
