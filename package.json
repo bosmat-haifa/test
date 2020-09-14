@@ -1,35 +1,31 @@
 {
-  "name": "netlify-express",
-  "version": "0.0.1",
-  "description": "Example of how to deploy a Express.js Netlify app.",
-  "main": "functions/server.js",
+  "name": "test",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.8.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "lesshat": "^4.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neverendingqs/netlify-express.git"
+    "url": "git+https://github.com/bosmat-haifa/test.git"
   },
-  "keywords": [
-    "netlify",
-    "express.js"
-  ],
-  "author": "neverendingqs",
-  "license": "Apache-2.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
+    "url": "https://github.com/bosmat-haifa/test/issues"
   },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {
-    "lesshat": "^4.1.0"
-  },
-  "devDependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2"
-  },
-  "engines": {
-    "node": "12.8.0"
-  }
+  "homepage": "https://github.com/bosmat-haifa/test#readme"
 }
