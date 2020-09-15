@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="loadingscreen.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    body {
+      background-image: linear-gradient(45deg, #6366be, #807bce);
+      font-family: 'Muli', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .courses-container {}
+
+    .course {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      max-width: 100%;
+      margin: 20px;
+      overflow: hidden;
+      width: 700px;
+    }
+
+    .course h6 {
+      opacity: 0.6;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      direction: rtl;
+    }
+
+    .course h2 {
+      letter-spacing: 1px;
+      margin: 10px 0;
+      direction: rtl;
+    }
+
+    .course-preview {
+      background-color: #2A265F;
+      color: #fff;
+      padding: 30px;
+      max-width: 250px;
+    }
+
+    .course-preview a {
+      color: #fff;
+      display: inline-block;
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 30px;
+      text-decoration: none;
+    }
+
+    .course-info {
+      padding: 30px;
+      position: relative;
+      width: 100%;
+    }
+
+    .progress-container {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      text-align: right;
+      width: 150px;
+    }
+
+    .progress {
+      background-color: #ddd;
+      border-radius: 3px;
+      height: 5px;
+      width: 100%;
+    }
+
+    .progress::after {
+      border-radius: 3px;
+      background-color: #2A265F;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 66%;
+    }
+
+    .progress-text {
+      font-size: 10px;
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      background-color: #2A265F;
+      border: 0;
+      border-radius: 50px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 25px;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      letter-spacing: 1px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
+  <div class="courses-container">
+    <div class="course">
+      <div class="course-info">
+        <h6>הסבר</h6>
+        <h2>תהליך ההרשמה לכיתה ז</h2>
+        <button class="btn" onclick="window.location.href = '/seventh-grade'">המשך</button>
+      </div>
+      <div class="course-preview">
+        <h6>רישום</h6>
+        <h2>הרשמה לכיתה ז</h2>
+      </div>
+    </div>
+  </div>
+  <div class="courses-container">
+    <div class="course">
+      <div class="course-info">
+        <h6>הסבר</h6>
+        <h2>תהליך ההרשמה לכיתה י</h2>
+        <button class="btn" onclick="window.location.href = '/ninth-grade'">המשך</button>
+      </div>
+      <div class="course-preview">
+        <h6>רישום</h6>
+        <h2>הרשמה לכיתה י</h2>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("load", () => {
+      var wrapper = document.getElementById("wrapper");
+      wrapper.setAttribute("class", "wrapperfadeout");
+      setTimeout(() => {
+        wrapper.remove();
+      }, 2500);
+    })
+
+  </script>
+</body>
+
+</html>
