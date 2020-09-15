@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" href="loadingscreen.css">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
@@ -24,8 +24,6 @@
       min-height: 100vh;
       margin: 0;
     }
-
-    .courses-container {}
 
     .course {
       background-color: #fff;
@@ -118,36 +116,207 @@
       bottom: 30px;
       left: 30px;
       letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
     }
 
+    .courses-container:not(.hebrew) .course h6 {
+      direction: ltr;
+    }
+
+    .courses-container:not(.hebrew) .course h2 {
+      direction: ltr;
+    }
+
+    .courses-container:not(.hebrew) .course .course-info .btn {
+      right: 30px;
+      left: unset;
+    }
+
+    .btn:hover {
+      transform: scale(1.2);
+    }
+
+    #languages {
+      text-align: center;
+      width: 98px;
+      height: 66px;
+      z-index: 1;
+      position: absolute;
+      right: 3%;
+      top: 3%;
+      list-style-type: none;
+      overflow-y: hidden;
+      overflow-x: visible;
+      margin: 0;
+      padding: 5px;
+      background-color: #807bce;
+      border-radius: 20px;
+      border: 3px white solid;
+      transition: height 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    }
+
+    
+
+    #languages:hover {
+      height: 177.5px;
+      background-color: #2a265fcb;
+    }
+
+    #languages li {
+      color: black;
+      cursor: pointer;
+    }
+
+    #languages li:first-child {
+      cursor: default;
+      overflow-x: visible;
+    }
+
+    #languages li:first-child:before {
+      content: "";
+      display: inline-block;
+      border-top: 8px solid white;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      width: 0;
+      height: 0;
+      vertical-align: middle;
+      position: absolute;
+      top: 25px;
+      left: 7px;
+    }
+
+    #languages li img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .svg-icon {
+      width: 3.5em;
+      height: 3.5em;
+    }
+
+    .svg-icon path,
+    .svg-icon polygon,
+    .svg-icon rect {
+      fill: #ffffff;
+    }
+
+    /* #2A265F */
+
+    .homebtn {
+        cursor: pointer;
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        border-radius: 1em;
+        border: white 2px solid;
+        overflow: hidden;
+        background-color: #7a7ee7;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+    
+    .homebtn:hover {
+        transform: scale(1.05);
+        background-color: #2a265fcb;
+    }
   </style>
 </head>
 
 <body>
   <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
-  <div class="courses-container">
+
+  <div class="homebtn" onclick="window.location.href = window.location.origin;">
+    <svg class="svg-icon" viewBox="0 0 20 20">
+        <path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
+    </svg>
+  </div>
+
+  <ul name="languages" id="languages">
+    <li id="hebrew"><a onclick="hebrew();"><img src="./israel.png" alt="Flag of Israel"></a></li>
+    <li id="english"><a onclick="english();"><img src="./us.png" alt="Flag of USA"></a></li>
+    <li id="russian"><a onclick="russian();"><img src="./russia.png" alt="Flag of Russia"></a></li>
+  </ul>
+
+  <div class="courses-container hebrew">
     <div class="course">
       <div class="course-info">
         <h6>הסבר</h6>
-        <h2>תהליך ההרשמה לכיתה ז</h2>
-        <button class="btn" onclick="window.location.href = '/seventh-grade'">המשך</button>
+        <h2>תהליך ההרשמה לכיתה ז'</h2>
+        <button class="btn" onclick="window.location.href = '/7th-grade'">המשך</button>
       </div>
       <div class="course-preview">
         <h6>רישום</h6>
-        <h2>הרשמה לכיתה ז</h2>
+        <h2>הרשמה לכיתה ז'</h2>
       </div>
     </div>
   </div>
-  <div class="courses-container">
+  <div class="courses-container hebrew">
     <div class="course">
       <div class="course-info">
         <h6>הסבר</h6>
-        <h2>תהליך ההרשמה לכיתה י</h2>
-        <button class="btn" onclick="window.location.href = '/ninth-grade'">המשך</button>
+        <h2>תהליך ההרשמה לכיתה י'</h2>
+        <button class="btn" onclick="window.location.href = '/10th-grade'">המשך</button>
       </div>
       <div class="course-preview">
         <h6>רישום</h6>
-        <h2>הרשמה לכיתה י</h2>
+        <h2>הרשמה לכיתה י'</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-container english">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Registration</h6>
+        <h2>Registration for the 7th grade</h2>
+      </div>
+      <div class="course-info">
+        <h6>Explenation</h6>
+        <h2>Registration process for the 7th grade</h2><br>
+        <button class="btn" onclick="window.location.href = '/7th-grade'">Continue</button>
+      </div>
+    </div>
+  </div>
+  <div class="courses-container english">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Registration</h6>
+        <h2>Registration for the 10th grade</h2>
+      </div>
+      <div class="course-info">
+        <h6>Explenation</h6>
+        <h2>Registration process for the 10th grade</h2><br>
+        <button class="btn" onclick="window.location.href = '/10th-grade'">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-container russian">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Registration</h6>
+        <h2>Registration for the 7th grade</h2>
+      </div>
+      <div class="course-info">
+        <h6>Explenation</h6>
+        <h2>Registration process for the 7th grade</h2><br>
+        <button class="btn" onclick="window.location.href = '/7th-grade'">Continue</button>
+      </div>
+    </div>
+  </div>
+  <div class="courses-container russian">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Registration</h6>
+        <h2>Registration for the 10th grade</h2>
+      </div>
+      <div class="course-info">
+        <h6>Explenation</h6>
+        <h2>Registration process for the 10th grade</h2><br>
+        <button class="btn" onclick="window.location.href = '/10th-grade'">Continue</button>
       </div>
     </div>
   </div>
@@ -159,6 +328,73 @@
         wrapper.remove();
       }, 2500);
     })
+
+    const courseContainers = document.getElementsByClassName("courses-container");
+
+
+    for (let i = 0; i < courseContainers.length; i++) {
+      const courseContainer = courseContainers[i];
+      if (courseContainer.className.split(' ').pop() != "hebrew") {
+        courseContainer.style.display = "none";
+      }
+    }
+
+    function hebrew() {
+      for (let i = 0; i < courseContainers.length; i++) {
+        const courseContainer = courseContainers[i];
+        if (courseContainer.className.split(' ').pop() != "hebrew") {
+          courseContainer.style.display = "none";
+        } else {
+          courseContainer.style.display = "block";
+        }
+      }
+      const languages = document.getElementById("languages");
+      const he = document.getElementById("hebrew");
+      const en = document.getElementById("english");
+      const ru = document.getElementById("russian");
+      languages.replaceChild(he, en);
+      languages.replaceChild(he, ru);
+      languages.appendChild(en);
+      languages.appendChild(ru);
+    }
+
+    function english() {
+      for (let i = 0; i < courseContainers.length; i++) {
+        const courseContainer = courseContainers[i];
+        if (courseContainer.className.split(' ').pop() != "english") {
+          courseContainer.style.display = "none";
+        } else {
+          courseContainer.style.display = "block";
+        }
+      }
+      const languages = document.getElementById("languages");
+      const he = document.getElementById("hebrew");
+      const en = document.getElementById("english");
+      const ru = document.getElementById("russian");
+      languages.replaceChild(en, he);
+      languages.replaceChild(en, ru);
+      languages.appendChild(he);
+      languages.appendChild(ru);
+    }
+
+    function russian() {
+      for (let i = 0; i < courseContainers.length; i++) {
+        const courseContainer = courseContainers[i];
+        if (courseContainer.className.split(' ').pop() != "russian") {
+          courseContainer.style.display = "none";
+        } else {
+          courseContainer.style.display = "block";
+        }
+      }
+      const languages = document.getElementById("languages");
+      const he = document.getElementById("hebrew");
+      const en = document.getElementById("english");
+      const ru = document.getElementById("russian");
+      languages.replaceChild(ru, he);
+      languages.replaceChild(ru, en);
+      languages.appendChild(en);
+      languages.appendChild(he);
+    }
 
   </script>
 </body>
