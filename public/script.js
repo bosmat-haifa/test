@@ -61,7 +61,6 @@ function hebrew() {
     languages.replaceChild(he, ru);
     languages.appendChild(en);
     languages.appendChild(ru);
-    // languages = document.getElementById("languages");
 }
 
 function english() {
@@ -78,7 +77,6 @@ function english() {
     languages.replaceChild(en, ru);
     languages.appendChild(he);
     languages.appendChild(ru);
-    // languages = document.getElementById("languages");
 }
 
 function russian() {
@@ -95,5 +93,4 @@ function russian() {
     languages.replaceChild(ru, en);
     languages.appendChild(en);
     languages.appendChild(he);
-    // languages = document.getElementById("languages");
 }
