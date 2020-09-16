@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const enforce = require('express-sslify');
+const http = require("http");
+const idk = require("os");
+console.log(idk.platform());
+
 
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
@@ -19,4 +23,7 @@ app.use((req, res) => {
  });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Local app listening on port ${PORT}!`));
+// app.listen(PORT, () => console.log(`Local app listening on port ${PORT}!`));
+http.createServer(app).listen(PORT, function() {
+    console.log('Express server listening on port ' + PORT);
+});
