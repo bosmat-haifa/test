@@ -1,13 +1,9 @@
 const express = require("express");
 const app = express();
 const path = require('path');
-const enforce = require('express-sslify');
 const http = require("http");
-const idk = require("os");
-console.log(idk.platform());
 
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -17,8 +13,6 @@ app.get('/7th-grade', (req, res) => res.sendFile(path.join(__dirname, 'pages/sig
 app.get('/10th-grade', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/10th-grade.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/login.html')));
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/register.html')));
-app.get('/.well-known/pki-validation/7A2308F1AEDC22870D2995AD3A932F90.txt', (req, res) => res.sendFile(path.join(__dirname, '/.well-known/pki-validation/7A2308F1AEDC22870D2995AD3A932F90.txt')));
-
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "pages/404.html"));
