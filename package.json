@@ -12,6 +12,7 @@
   "dependencies": {
     "@sweetalert2/theme-dark": "^4.0.0",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "sweetalert2": "^10.0.2"
   },
   "devDependencies": {},
