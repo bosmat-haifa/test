@@ -14,6 +14,8 @@ app.get('/10th-grade', (req, res) => res.sendFile(path.join(__dirname, 'pages/si
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/login.html')));
 app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/register.html')));
 app.get('/where', (req, res) => res.sendFile(path.join(__dirname, 'pages/moovit.html')));
+app.get('/pam', (req, res) => res.sendFile(path.join(__dirname, 'pages/projectsandmegamot.html')));
+app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'pages/contact.html')));
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "pages/404.html"));
