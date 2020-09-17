@@ -16,6 +16,7 @@ app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/
 app.get('/where', (req, res) => res.sendFile(path.join(__dirname, 'pages/moovit.html')));
 app.get('/pam', (req, res) => res.sendFile(path.join(__dirname, 'pages/projectsandmegamot.html')));
 app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'pages/contact.html')));
+app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "pages/404.html"));
