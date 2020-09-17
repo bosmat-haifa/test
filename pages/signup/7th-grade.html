@@ -7,9 +7,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="loadingscreen.css">
   <style>
+    body {
+      font-family: 'Muli', sans-serif;
+    }
+
+
     .svg-icon {
       width: 3.5em;
       height: 3.5em;
+      margin: 7px;
     }
 
     .svg-icon path,
@@ -22,9 +28,7 @@
 
     .homebtn {
       cursor: pointer;
-      position: absolute;
-      top: 3%;
-      left: 3%;
+      padding-top: 7px;
       border-radius: 1em;
       border: white 2px solid;
       overflow: hidden;
@@ -37,6 +41,55 @@
       background-color: #2a265fcb;
     }
 
+    .icon {
+      display: inline-block;
+      width: 3.5em;
+      height: 3.5em;
+      stroke-width: 0;
+      stroke: white;
+      fill: white;
+      margin: 7px;
+    }
+
+    .returnbtn {
+      cursor: pointer;
+      margin-top: 10px;
+      padding-top: 7px;
+      border-radius: 1em;
+      border: white 2px solid;
+      overflow: hidden;
+      background-color: #7a7ee7;
+      transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+
+    .returnbtn:hover {
+      transform: scale(1.05);
+      background-color: #2a265fcb;
+    }
+
+    .btns {
+      position: absolute;
+      top: 3%;
+      left: 3%;
+    }
+
+    section {
+        direction: rtl;
+    }
+
+    .section0 {
+      text-align: center;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .actual-content {
+        margin: auto;
+    }
+
   </style>
 </head>
 
@@ -44,13 +97,51 @@
   <div id="wrapper"><img src="bosmat.png" alt="Bosmat Logo" width="773px" height="346px"></div>
 
 
-  <div class="homebtn" onclick="window.location.href = window.location.origin;">
-    <svg class="svg-icon" viewBox="0 0 20 20">
-      <path
-        d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z">
-      </path>
-    </svg>
+  <div class="btns">
+    <div class="homebtn" onclick="window.location.href = window.location.origin;">
+      <svg class="svg-icon" viewBox="0 0 20 20">
+        <path
+          d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z">
+        </path>
+      </svg>
+    </div>
+    <div class="returnbtn">
+      <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <title></title>
+        <g id="icomoon-ignore">
+        </g>
+        <path
+          d="M112 220h108l-40.368-40.368c20.399-20.398 47.52-31.632 76.368-31.632s55.969 11.234 76.368 31.632c20.397 20.399 31.632 47.52 31.632 76.368s-11.235 55.969-31.632 76.368c-20.399 20.397-47.52 31.632-76.368 31.632s-55.969-11.235-76.368-31.632c-1.703-1.703-3.337-3.458-4.91-5.25l-27.090 23.704c26.394 30.14 65.156 49.178 108.367 49.178 79.53 0 144-64.471 144-144s-64.471-144-144-144c-39.764 0-75.76 16.123-101.817 42.183l-42.183-42.183v108z">
+        </path>
+      </svg>
+    </div>
   </div>
+
+
+  <div class="info">
+    <p>bullshit goes here</p>
+  </div>
+
+  <div class="content">
+    <div class="section0">
+      <h1>הרשמה לכיתה ז'</h1>
+      <p>הורים יקרים,<br>
+        <br>
+        עדכון חשוב לגבי הרישום לבית הספר בסמת החדש.</p>
+    </div>
+    <div class="actual-content">
+        <section class="section1">
+            <img src="" alt="">
+            <p>
+                ,ביום ראשון ה- 29/3/20 , יפתח באתר העירייה הרישום לכיתה ז'<br>
+                .וימשך עד יום שישי ה – 3/4/20
+            </p>
+        </section>
+        <section class="section2"></section>
+        <section class="section3"></section>
+    </div>
+  </div>
+
 
 
   <script>
