@@ -169,7 +169,11 @@
       transition: background-color 0.5s ease-in-out;
     }
 
-    ul#numbers li:not(.dash):hover ~ li.selected {
+    ul#numbers li:not(.dash):not(.selected):hover ~ li.selected {
+      background-color: transparent;
+    }
+
+    ul#numbers :not(li:not(.dash):not(.selected):hover ~ li.selected) {
       background-color: transparent;
     }
 
@@ -247,11 +251,11 @@
   </div>
 
   <ul id="numbers">
-    <li id="3">3</li>
+    <li id="3" onclick="select('3')">3</li>
     <li class="dash"></li>
-    <li id="2">2</li>
+    <li id="2" onclick="select('2')">2</li>
     <li class="dash"></li>
-    <li id="1" class="selected">1</li>
+    <li id="1" class="selected" onclick="select('1')">1</li>
   </ul>
 
   <script>
@@ -262,6 +266,16 @@
         wrapper.remove();
       }, 2500);
     });
+
+    const numbers = document.getElementById("numbers").children;
+    function select(element) {
+      const selected = document.getElementsByClassName("selected")[0];
+      selected.className = "";
+      
+      const toSelect = document.getElementById(element);
+      toSelect.className = "selected";
+    }
+
 
   </script>
 </body>
