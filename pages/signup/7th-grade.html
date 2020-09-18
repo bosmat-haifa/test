@@ -89,19 +89,31 @@
 
     section {
       direction: rtl;
+      display: block;
+    }
+
+    section:not(.section0) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section:not(.section0) p {
+      width: 384px;
+      text-align: center;
+      /* באמת נראה לי שככה זה נראה הכי טוב */
     }
 
     .section0 {
       text-align: center;
     }
-
+    
     .info {
       position: absolute;
-      bottom: 0;
-    }
-
-    .actual-content {
-      margin: auto;
+      bottom: 3%;
+      left: 3%;
+      text-align: center;
+      direction: rtl;
     }
 
   </style>
@@ -119,7 +131,7 @@
         </path>
       </svg>
     </div>
-    <div class="returnbtn">
+  <div class="returnbtn" onclick="window.location.href = `${window.location.origin}/signup`;">
       <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
         <title></title>
         <g id="icomoon-ignore">
@@ -131,28 +143,50 @@
     </div>
   </div>
 
-
+<!-- וואלה כן אני טיפש עכשיו אחרי חצות מה נראה לך שאני -->
   <div class="info">
-    <p>bullshit goes here</p>
+    <h1>פרטים</h1>
+    <p>
+      המלך דוד 33, חיפה. מיקוד 3542118<br>
+      טלפון רב קווי: 04-8626282<br>
+      פקס: 04-8629850<br>
+      bosmat.zadok@gmail.com<br>
+      אתר נבנה ע"י תלמידי בסמת
+    </p>
   </div>
 
   <div class="content">
     <div class="section0">
-      <h1>הרשמה לכיתה ז'</h1>
-      <p>הורים יקרים,<br>
+      <h1>'הרשמה לכיתה ז</h1>
+      <p>,הורים יקרים<br> 
         <br>
-        עדכון חשוב לגבי הרישום לבית הספר בסמת החדש.</p>
+        .עדכון חשוב לגבי הרישום לבית הספר בסמת החדש</p>
     </div>
     <div class="actual-content">
-      <section class="section1">
-        <img src="" alt="">
+      <section class="section1"> 
+        <p style="margin-left: 100px;"> 
+          ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
+          וימשך עד יום שישי ה – 3/4/20.
+        </p>
+        <img src="test.svg" alt="Picture" style="height: 216px;">
+      </section>
+      <section class="section2">
+        <img src="test.svg" alt="Picture" style="margin-left: 100px; height: 216px;">
         <p>
-          ,ביום ראשון ה- 29/3/20 , יפתח באתר העירייה הרישום לכיתה ז'<br>
-          .וימשך עד יום שישי ה – 3/4/20
+          הקריטריונים לעמידה בתנאי הקבלה הם הציונים בתעודת מחצית א' של כיתה ו' תש"פ:<br>
+          מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.
         </p>
       </section>
-      <section class="section2"></section>
-      <section class="section3"></section>
+      <section class="section3">
+        <p style="margin-left: 100px;">
+          אנא שלחו צילום של תעודת מחצית א' של תש"פ, עד סוף השבוע הזה יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
+          <strong>inna.kislev@gmail.com</strong><br>
+          אנו נשלח לכם בדואר אלקטרוני חוזר אישור עמידה בקריטריונים כדי שתוכלו להירשם ביום ראשון בעירייה.<br>
+          <br>
+          <strong>בהצלחה!</strong>
+        </p>
+        <img src="test.svg" alt="Picture" style="height: 216px;">
+      </section>
     </div>
   </div>
 
