@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,7 +13,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-178276123-1');
-
   </script>
 
   <meta charset="UTF-8">
@@ -180,7 +179,12 @@
       width: 1000px;
       height: 450px;
       display: flex;
+      opacity: 0;
       align-items: center;
+    }
+
+    .sumsum:not(.show) {
+      opacity: 0;
     }
 
     .sumsum p {
@@ -195,8 +199,8 @@
       -webkit-user-drag: none;
     }
 
-    .notsumsum {
-      display: none;
+    .show {
+      opacity: 1;
     }
 
   </style>
@@ -230,27 +234,30 @@
   <h1 dir=rtl style="text-shadow: 1px 2px 3px black; text-align: center; font-size: 40px;">תהליך ההרשמה לכיתה ז'</h1>
 
 
-  <div id="4" class="sumsum">
+  <div id="4" class="sumsum show">
     <img src="test.svg" alt="תמונת שומשום">
     <p>
       ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
       וימשך עד יום שישי ה – 3/4/20.
     </p>
   </div>
-  <div id="5" class="notsumsum">
+  <div id="5" class="sumsum">
     <img src="test.svg" alt="">
-    <p>
-      הקריטריונים לעמידה בתנאי הקבלה הם הציונים בתעודת מחצית א' של כיתה ו' תש"פ:<br>
-      מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.
+    <p style="font-size: 135%;">
+      הקריטריונים לעמידה בתנאי הקבלה הם הציונים<br>בתעודת מחצית א' של כיתה ו' תש"פ:<br>
+      <strong>מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.</strong>
     </p>
   </div>
-  <!-- רגע אני חושב -->
-  <div id="6" class="notsumsum">
+  <div id="6" class="sumsum">
     <img src="test.svg" alt="">
-    <p>
-      אנא שלחו צילום של תעודת מחצית א' של תש"פ, עד סוף השבוע הזה יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
-      <strong>inna.kislev@gmail.com</strong><br>
-      אנו נשלח לכם בדואר אלקטרוני חוזר אישור עמידה בקריטריונים כדי שתוכלו להירשם ביום ראשון בעירייה.<br>
+    <p style="font-size: 130%;">
+      אנא שלחו צילום של תעודת מחצית א' של תש"פ,<br>
+      עד סוף השבוע הזה<br>
+      יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
+      <strong>inna.kislev@gmail.com</strong><br><br>
+      אנו נשלח לכם בדואר אלקטרוני חוזר אישור<br>
+      עמידה בקריטריונים כדי שתוכלו להירשם<br>
+      ביום ראשון בעירייה.<br>
       <br>
       <strong>בהצלחה!</strong>
     </p>
@@ -281,34 +288,50 @@
         currentlySelected.style.backgroundColor = "transparent";
       }
     });
-    numbers.addEventListener("mouseout", (event) => {
+
+
+    let loop = true;
+
+    function cycle(event) {
       const currentlySelected = numbers.getElementsByClassName("selected")[0];
-      if (["1", "2", "3"].includes(event.target.id) && event.target.className != "selected") {
-        event.target.style.backgroundColor = "transparent";
-        currentlySelected.style.backgroundColor = "#1082c9";
-      }
-    });
+      if (event) {
+        if (["1", "2", "3"].includes(event.target.id) && event.target.className != "selected") {
+          event.target.style.backgroundColor = "transparent";
+          currentlySelected.style.backgroundColor = "#1082c9";
+        };
+      } else if (loop) {
+        const next = parseInt(currentlySelected.id) < 3 ? parseInt(currentlySelected.id) + 1 : 1;
+        const nextSelected = document.getElementById(next.toString());
+        currentlySelected.removeAttribute("class");
+        nextSelected.setAttribute("class", "selected");
+        select(next.toString(), false);
+      };
+    };
+
+    const id = setInterval(() => {
+      if (!loop) clearInterval(id);
+      cycle();
+    }, 5000)
+    numbers.addEventListener("mouseout", cycle);
     let debounce = false;
-    function select(element) {
+    function select(element, disableLoop = true) {
+      if (disableLoop) loop = false;
       if (!debounce) {
         debounce = true;
         const selected = document.getElementsByClassName("selected")[0];
-        selected.className = "";
+        selected.removeAttribute("class");
 
         const toSelect = document.getElementById(element);
-        toSelect.className = "selected";
+        toSelect.setAttribute("class", "selected");
 
-
-        const seldiv = document.getElementsByClassName("sumsum")[0];
-        seldiv.style.opacity = "0";
-        setTimeout(() => {
-          seldiv.className = "notsumsum";
-          debounce = false
-        }, 1000);
+        const seldiv = document.getElementsByClassName("show")[0];
+        seldiv.setAttribute("class", "sumsum");
 
         const toseldiv = document.getElementById(`${parseInt(element)+3}`);
-        toseldiv.className = "sumsum";
-        toseldiv.style.opacity = "1";
+        setTimeout(() => {
+          toseldiv.setAttribute("class", "sumsum show");
+          debounce = false;
+        }, 1000);
       }
     }
 
