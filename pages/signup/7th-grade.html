@@ -169,6 +169,10 @@
       background-color: transparent;
     } */
 
+    h1 ~ div {
+      transition: opacity 1s ease-in-out;
+    }
+
     .sumsum {
       position: absolute;
       top: calc(45% - 225px);
@@ -226,20 +230,30 @@
   <h1 dir=rtl style="text-shadow: 1px 2px 3px black; text-align: center; font-size: 40px;">תהליך ההרשמה לכיתה ז'</h1>
 
 
-  <div class="sumsum">
+  <div id="4" class="sumsum">
     <img src="test.svg" alt="תמונת שומשום">
     <p>
       ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
       וימשך עד יום שישי ה – 3/4/20.
     </p>
   </div>
-  <div class="notsumsum">
+  <div id="5" class="notsumsum">
     <img src="test.svg" alt="">
-    <p></p>
+    <p>
+      הקריטריונים לעמידה בתנאי הקבלה הם הציונים בתעודת מחצית א' של כיתה ו' תש"פ:<br>
+      מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.
+    </p>
   </div>
-  <div class="notsumsum">
+  <!-- רגע אני חושב -->
+  <div id="6" class="notsumsum">
     <img src="test.svg" alt="">
-    <p></p>
+    <p>
+      אנא שלחו צילום של תעודת מחצית א' של תש"פ, עד סוף השבוע הזה יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
+      <strong>inna.kislev@gmail.com</strong><br>
+      אנו נשלח לכם בדואר אלקטרוני חוזר אישור עמידה בקריטריונים כדי שתוכלו להירשם ביום ראשון בעירייה.<br>
+      <br>
+      <strong>בהצלחה!</strong>
+    </p>
   </div>
 
   <ul id="numbers">
@@ -274,11 +288,28 @@
         currentlySelected.style.backgroundColor = "#1082c9";
       }
     });
+    let debounce = false;
     function select(element) {
-      const selected = document.getElementsByClassName("selected")[0];
-      selected.className = "";
-      const toSelect = document.getElementById(element);
-      toSelect.className = "selected";
+      if (!debounce) {
+        debounce = true;
+        const selected = document.getElementsByClassName("selected")[0];
+        selected.className = "";
+
+        const toSelect = document.getElementById(element);
+        toSelect.className = "selected";
+
+
+        const seldiv = document.getElementsByClassName("sumsum")[0];
+        seldiv.style.opacity = "0";
+        setTimeout(() => {
+          seldiv.className = "notsumsum";
+          debounce = false
+        }, 1000);
+
+        const toseldiv = document.getElementById(`${parseInt(element)+3}`);
+        toseldiv.className = "sumsum";
+        toseldiv.style.opacity = "1";
+      }
     }
 
 
