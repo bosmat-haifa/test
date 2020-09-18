@@ -149,6 +149,7 @@
       margin: 0;
       line-height: var(--size);
       cursor: pointer;
+      transition: background-color 0.5s ease-in-out;
     }
 
     #numbers li.dash::before {
@@ -156,26 +157,17 @@
       margin: 20px;
     }
 
-    #numbers li:not(.dash):not(.selected) {
-      transition: background-color 0.5s ease-in-out;
-    }
-
-    #numbers li:not(.dash):not(.selected):hover {
-      background-color: #1082c9;
-    }
-
     .selected {
       background-color: #1082c9;
-      transition: background-color 0.5s ease-in-out;
     }
-
+/* 
     ul#numbers li:not(.dash):not(.selected):hover ~ li.selected {
       background-color: transparent;
     }
 
     ul#numbers :not(li:not(.dash):not(.selected):hover ~ li.selected) {
       background-color: transparent;
-    }
+    } */
 
     .sumsum {
       position: absolute;
@@ -267,11 +259,24 @@
       }, 2500);
     });
 
-    const numbers = document.getElementById("numbers").children;
+    const numbers = document.getElementById("numbers");
+    numbers.addEventListener("mouseover", (event) => {
+      const currentlySelected = numbers.getElementsByClassName("selected")[0];
+      if (["1", "2", "3"].includes(event.target.id) && event.target.className != "selected") {
+        event.target.style.backgroundColor = "#1082c9";
+        currentlySelected.style.backgroundColor = "transparent";
+      }
+    });
+    numbers.addEventListener("mouseout", (event) => {
+      const currentlySelected = numbers.getElementsByClassName("selected")[0];
+      if (["1", "2", "3"].includes(event.target.id) && event.target.className != "selected") {
+        event.target.style.backgroundColor = "transparent";
+        currentlySelected.style.backgroundColor = "#1082c9";
+      }
+    });
     function select(element) {
       const selected = document.getElementsByClassName("selected")[0];
       selected.className = "";
-      
       const toSelect = document.getElementById(element);
       toSelect.className = "selected";
     }
