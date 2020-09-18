@@ -23,8 +23,8 @@
   <style>
     body {
       font-family: 'Muli', sans-serif;
-      background-image: linear-gradient(135deg, rgb(60, 61, 78) 14%, rgb(33, 35, 44) 65%, rgb(16, 16, 22) 100%);
-      color: white;
+      background: linear-gradient(167deg, rgba(174,204,255,1) 0%, rgba(179,199,255,1) 100%);
+      color: black;
     }
 
 
@@ -115,88 +115,13 @@
     .section0 {
       text-align: center;
     }
-
+    
     .info {
       position: absolute;
       bottom: 3%;
       left: 3%;
       text-align: center;
       direction: rtl;
-    }
-
-    #numbers {
-      position: absolute;
-      list-style: none;
-      padding: 0;
-      font-size: 0;
-      bottom: 10%;
-      width: 100%;
-      text-align: center;
-      user-select: none;
-    }
-
-    #numbers li {
-      display: inline-block;
-      font-size: 80px;
-    }
-
-    #numbers li:not(.dash) {
-      --size: 85px;
-      border: 5px white solid;
-      border-radius: 50%;
-      width: var(--size);
-      height: var(--size);
-      margin: 0;
-      line-height: var(--size);
-      cursor: pointer;
-    }
-
-    #numbers li.dash::before {
-      content: "-";
-      margin: 20px;
-    }
-
-    #numbers li:not(.dash):not(.selected) {
-      transition: background-color 0.5s ease-in-out;
-    }
-
-    #numbers li:not(.dash):not(.selected):hover {
-      background-color: #1082c9;
-    }
-
-    .selected {
-      background-color: #1082c9;
-      transition: background-color 0.5s ease-in-out;
-    }
-
-    ul#numbers li:not(.dash):hover ~ li.selected {
-      background-color: transparent;
-    }
-
-    .sumsum {
-      position: absolute;
-      top: calc(45% - 225px);
-      left: calc(50% - 500px);
-      width: 1000px;
-      height: 450px;
-      display: flex;
-      align-items: center;
-    }
-
-    .sumsum p {
-      position: absolute;
-      direction: rtl;
-      right: 0;
-      font-size: 150%;
-      text-shadow: 1px 1px 3px black;
-    }
-
-    .sumsum img {
-      -webkit-user-drag: none;
-    }
-
-    .notsumsum {
-      display: none;
     }
 
   </style>
@@ -214,7 +139,7 @@
         </path>
       </svg>
     </div>
-    <div class="returnbtn" onclick="window.location.href = `${window.location.origin}/signup`;">
+  <div class="returnbtn" onclick="window.location.href = `${window.location.origin}/signup`;">
       <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
         <title></title>
         <g id="icomoon-ignore">
@@ -226,33 +151,54 @@
     </div>
   </div>
 
-
-  <h1 dir=rtl style="text-shadow: 1px 2px 3px black; text-align: center; font-size: 40px;">תהליך ההרשמה לכיתה ז'</h1>
-
-
-  <div class="sumsum">
-    <img src="test.svg" alt="תמונת שומשום">
+<!-- וואלה כן אני טיפש עכשיו אחרי חצות מה נראה לך שאני -->
+  <div class="info">
+    <h1>פרטים</h1>
     <p>
-      ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
-      וימשך עד יום שישי ה – 3/4/20.
+      המלך דוד 33, חיפה. מיקוד 3542118<br>
+      טלפון רב קווי: 04-8626282<br>
+      פקס: 04-8629850<br>
+      bosmat.zadok@gmail.com<br>
+      אתר נבנה ע"י תלמידי בסמת
     </p>
   </div>
-  <div class="notsumsum">
-    <img src="test.svg" alt="">
-    <p></p>
-  </div>
-  <div class="notsumsum">
-    <img src="test.svg" alt="">
-    <p></p>
+
+  <div class="content">
+    <div class="section0">
+      <h1>'הרשמה לכיתה ז</h1>
+      <p>,הורים יקרים<br> 
+        <br>
+        .עדכון חשוב לגבי הרישום לבית הספר בסמת החדש</p>
+    </div>
+    <div class="actual-content">
+      <section class="section1"> 
+        <p style="margin-left: 100px;"> 
+          ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
+          וימשך עד יום שישי ה – 3/4/20.
+        </p>
+        <img src="test.svg" alt="Picture" style="height: 216px;">
+      </section>
+      <section class="section2">
+        <img src="test.svg" alt="Picture" style="margin-left: 100px; height: 216px;">
+        <p>
+          הקריטריונים לעמידה בתנאי הקבלה הם הציונים בתעודת מחצית א' של כיתה ו' תש"פ:<br>
+          מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.
+        </p>
+      </section>
+      <section class="section3">
+        <p style="margin-left: 100px;">
+          אנא שלחו צילום של תעודת מחצית א' של תש"פ, עד סוף השבוע הזה יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
+          <strong>inna.kislev@gmail.com</strong><br>
+          אנו נשלח לכם בדואר אלקטרוני חוזר אישור עמידה בקריטריונים כדי שתוכלו להירשם ביום ראשון בעירייה.<br>
+          <br>
+          <strong>בהצלחה!</strong>
+        </p>
+        <img src="test.svg" alt="Picture" style="height: 216px;">
+      </section>
+    </div>
   </div>
 
-  <ul id="numbers">
-    <li id="3">3</li>
-    <li class="dash"></li>
-    <li id="2">2</li>
-    <li class="dash"></li>
-    <li id="1" class="selected">1</li>
-  </ul>
+
 
   <script>
     window.addEventListener("load", () => {
