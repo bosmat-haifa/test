@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,6 +13,7 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-178276123-1');
+
   </script>
 
   <meta charset="UTF-8">
@@ -90,42 +91,7 @@
       top: 3%;
       left: 3%;
     }
-
-    section {
-      direction: rtl;
-      display: block;
-    }
-
-    section:not(.section0) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    section:not(.section0) p {
-      width: 384px;
-      text-align: center;
-      background-color: #2A265F;
-      border-radius: 10px;
-      color: white;
-      font-family: 'Muli', sans-serif;
-      font-size: 18px;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-      /* באמת נראה לי שככה זה נראה הכי טוב */
-    }
-
-    .section0 {
-      text-align: center;
-    }
-
-    .info {
-      position: absolute;
-      bottom: 3%;
-      left: 3%;
-      text-align: center;
-      direction: rtl;
-    }
-
+    
     #numbers {
       position: absolute;
       list-style: none;
@@ -162,7 +128,8 @@
     .selected {
       background-color: #1082c9;
     }
-/* 
+
+    /* 
     ul#numbers li:not(.dash):not(.selected):hover ~ li.selected {
       background-color: transparent;
     }
@@ -171,7 +138,7 @@
       background-color: transparent;
     } */
 
-    h1 ~ div {
+    h1~div {
       transition: opacity 0.5s ease-in-out;
     }
 
@@ -191,20 +158,22 @@
     }
 
     .sumsum p {
-      position: absolute;
-      direction: rtl;
-      right: 0;
       font-size: 150%;
-      text-shadow: 1px 1px 3px black;
+      text-shadow: -1px 1px 3px black;
+      word-wrap: break-word;
+      width: 390px;
     }
 
     .sumsum img {
       -webkit-user-drag: none;
+      right: 0;
+      position: absolute;
     }
 
     .show {
       opacity: 1;
     }
+
 
   </style>
 </head>
@@ -223,57 +192,58 @@
     </div>
     <div class="returnbtn" onclick="window.location.href = `${window.location.origin}/signup`;">
       <svg class="icon" width="512" height="512" viewBox="0 0 16 16" class="bi bi-arrow-counterclockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
-  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
-</svg>
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+      </svg>
     </div>
   </div>
 
   <ul name="languages" id="languages">
-    <li id="hebrew"><a href="7th-grade"><img src="./israel.png" alt="Flag of Israel"></a></li>
     <li id="english"><a href="7th-grade-en"><img src="./us.png" alt="Flag of USA"></a></li>
+    <li id="hebrew"><a href="7th-grade"><img src="./israel.png" alt="Flag of Israel"></a></li>
     <li id="russian"><a href="7th-grade-ru"><img src="./russia.png" alt="Flag of Russia"></a></li>
   </ul>
 
 
-  <h1 dir=rtl style="text-shadow: 1px 2px 3px black; text-align: center; font-size: 40px;">תהליך ההרשמה לכיתה ז'</h1>
+  <h1 style="text-shadow: -1px 2px 3px black; text-align: center; font-size: 40px;">Registration process for the 7th grade</h1>
 
 
   <div id="4" class="sumsum show">
-    <img src="test.svg" alt="תמונת שומשום">
     <p>
-      ביום ראשון ה- 29/3/20 , יפתח באתר<br>העירייה הרישום <strong>לכיתה ז'</strong>,<br>
-      וימשך עד יום שישי ה – 3/4/20.
+      On Sunday (29/3/20), the
+      registration for <strong>7th grade</strong> will be
+      open on the municipality site and will
+      last till Friday (3/4/20).
     </p>
+    <img src="test.svg" alt="תמונת שומשום">
   </div>
   <div id="5" class="sumsum">
-    <img src="test.svg" alt="">
     <p style="font-size: 135%;">
-      הקריטריונים לעמידה בתנאי הקבלה הם הציונים<br>בתעודת מחצית א' של כיתה ו' תש"פ:<br>
-      <strong>מתמטיקה – 85 ומעלה, אנגלית – 85 ומעלה.</strong>
+      The criteria for meeting the admission requirements are
+      the grades of 6th class's first semester:<br>
+      Mathematics - <strong>85 and above</strong>.<br>
+      English - <strong>85 and above</strong>.
     </p>
+    <img src="test.svg" alt="">
   </div>
   <div id="6" class="sumsum">
-    <img src="test.svg" alt="">
     <p style="font-size: 130%;">
-      אנא שלחו צילום של תעודת מחצית א' של תש"פ,<br>
-      עד סוף השבוע הזה<br>
-      יום חמישי ה- 26/3/20 לדואר האלקטרוני:<br>
+      Please send a picture of the first semester's grade report till the end of this weekend
+      (Thursday 26/3/20)<br>
+      to this e-mail:<br>
       <strong>inna.kislev@gmail.com</strong><br><br>
-      אנו נשלח לכם בדואר אלקטרוני חוזר אישור<br>
-      עמידה בקריטריונים כדי שתוכלו להירשם<br>
-      ביום ראשון בעירייה.<br>
-      <br>
-      <strong>בהצלחה!</strong>
+      We will send you an e-mail confirming compliance with the criteria so you could sign up on Sunday at the municipality.<br><br>
+      <strong>Best of luck!</strong>
     </p>
+    <img src="test.svg" alt="">
   </div>
 
   <ul id="numbers">
-    <li id="3" onclick="select('3')">3</li>
+    <li id="1" class="selected" onclick="select('1')">1</li>
     <li class="dash"></li>
     <li id="2" onclick="select('2')">2</li>
     <li class="dash"></li>
-    <li id="1" class="selected" onclick="select('1')">1</li>
+    <li id="3" onclick="select('3')">3</li>
   </ul>
 
   <script>
@@ -319,6 +289,7 @@
     }, 5000)
     numbers.addEventListener("mouseout", cycle);
     let debounce = false;
+
     function select(element, disableLoop = true) {
       if (disableLoop) loop = false;
       if (!debounce) {
@@ -339,7 +310,6 @@
         }, 500);
       }
     }
-
 
   </script>
 </body>
