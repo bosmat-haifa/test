@@ -1,35 +1,4 @@
 /*
-    light and dark mode buttons shit
-*/
-
-const chk = document.getElementById('chk');
-
-chk.addEventListener('change', () => {
-    document.body.classList.toggle('light');
-
-    const YOSHA = document.getElementById("YOSHA");
-    const YOSHABLACK = document.getElementById("YOSHABLACK");
-    const background = document.getElementsByClassName("background")[0];
-
-    YOSHA.classList.toggle("hidelogo");
-    YOSHABLACK.classList.toggle("hidelogo");
-    background.classList.toggle("hidebackground");
-
-    const btnNot4 = document.getElementsByClassName("btn");
-    if (document.body.classList.contains("light")) {
-        for (const btn of btnNot4) {
-            if (btn.classList.contains("btn4")) continue;
-            btn.style.color = "black";
-        }
-    } else {
-        for (const btn of btnNot4) {
-            if (btn.classList.contains("btn4")) continue;
-            btn.style.color = "white";
-        }
-    }
-});
-
-/*
     languages shit
 */
 

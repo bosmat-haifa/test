@@ -11,6 +11,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.get('/signup', (req, res) => res.sendFile(path.join(__dirname, 'pages/signupbeta.html')));
 app.get('/7th-grade', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/7th-grade.html')));
 app.get('/7th-grade-en', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/7th-grade.en.html')));
+app.get('/test', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/7th-grade.enbeta.html')));
 app.get('/7th-grade-ru', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/7th-grade.ru.html')));
 app.get('/10th-grade', (req, res) => res.sendFile(path.join(__dirname, 'pages/signup/10th-grade.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'logandreg/login.html')));

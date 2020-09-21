@@ -6,63 +6,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Muli', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
     color: #333;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background: rgb(223,243,249);
-    background: linear-gradient(135deg, #dff3f9 0%, #89acb9 100%);
-    /* background-image: linear-gradient(135deg, rgba(79, 80, 102, 1) 14%, rgba(40, 42, 54, 1) 65%, rgba(19, 20, 27, 1) 100%); */
 }
 
 
 #v-header {
-    height: 100vh;
-    display: flex;
     color: #fff;
+    background-image: linear-gradient(135deg, #4f5066 14%, #282a36 65%, #13141b 100%);
+}
+
+#sectionA {
+    height: 150vh;
 }
 
 .container {
     width: 100%;
+    height: 100vh;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
-}
-
-.fullscreen-video-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.fullscreen-video-wrap video {
-    min-width: 100%;
-    min-height: 100%;
-}
-
-#header-overlay {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.header-content {
-    z-index: 2;
-    position: absolute;
-    right: 170px;
-    /* right tune */
-    top: 24%;
-    /* top tune */
 }
 
 .bosmatlogo {
@@ -139,28 +101,6 @@ img.hidelogo {
     transition: opacity 0.5s ease-in-out;
 }
 
-/*img.straight_finger {
-    z-index: 2;
-    position: absolute;
-    top: 445px;
-    left: 375px; 
-}*/
-
-/*img.slant_finger {
-    z-index: 2;
-    position: absolute;
-    top: 432px;
-    left: 567px;
-    opacity: 0.8;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    transition: transform .25s ease;
-}*/
-
-
 #pages {
     position: absolute;
     display: block;
@@ -171,8 +111,6 @@ img.hidelogo {
     font-size: 36px;
     width: 100vw;
 }
-
-/* where are the buttons g*/
 
 #pages button {
     text-decoration: none;
@@ -285,23 +223,6 @@ img.hidelogo {
     height: 125%;
 }
 
-/*.bosmat:hover, .slant_finger:hover {
-    scale: 125%;
-}
-
-*/
-/*
-.bosmat:hover + .slant_finger {
-    top: 422px;
-    left: 597px;
-}
-
-.slant_finger:hover, .slant_finger:hover + .bosmat {
-transform: scale(1.25);
-}
-*/
-
-
 .section {
     padding: 20px 0;
     height: 100vh;
@@ -325,83 +246,6 @@ transform: scale(1.25);
 /* starts here */
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-body.light {
-    color: black;
-}
-
-.btn:not(.btn4)>ul.light {
-    background-color: black;
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    opacity: 1;
-    background-image: linear-gradient(135deg, #4f5066 14%, #282a36 65%, #13141b 100%);
-    transition: opacity 0.3s ease-in-out;
-}
-
-.hidebackground {
-    opacity: 0;
-}
-
-#div {
-    position: absolute;
-    top: calc(3% + 10px);
-    left: calc(3% + 13px);
-    z-index: 2;
-}
-
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
-.label {
-    background-color: #111;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    height: 39px;
-    width: 75px;
-    transform: scale(1.5);
-}
-
-.label .ball {
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    height: 33px;
-    width: 33px;
-    transform: translateX(36px);
-    transition: transform 0.2s linear;
-}
-
-.checkbox:checked+.label .ball {
-    transform: translateX(0px);
-}
-
-
-.fa-moon {
-    color: #0f84f1;
-    font-size: 26px;
-}
-
-.fa-sun {
-    color: #d4e91d;
-    font-size: 26px
-}
 
 /* ends here */
 
