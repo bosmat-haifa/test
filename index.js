@@ -20,6 +20,7 @@ app.get('/where', (req, res) => res.sendFile(path.join(__dirname, 'pages/moovit.
 app.get('/pam', (req, res) => res.sendFile(path.join(__dirname, 'pages/projectsandmegamot.html')));
 app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'pages/contact.html')));
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
+app.get('/arc-sw.js', (req, res) => res.sendFile(path.join(__dirname, 'arc-sw.js')));
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "pages/404.html"));
