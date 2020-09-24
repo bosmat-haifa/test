@@ -21,6 +21,7 @@ app.get('/pam', (req, res) => res.sendFile(path.join(__dirname, 'pages/projectsa
 app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'pages/contact.html')));
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
 app.get('/arc-sw.js', (req, res) => res.sendFile(path.join(__dirname, 'arc-sw.js')));
+app.get('/.wellknown/brave-rewards-verification.txt', (req, res) => res.sendFile(path.join(__dirname, '.wellknown/brave-rewards-verification.txt')));
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, "pages/404.html"));

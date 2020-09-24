@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: bosmat.tk
+Token: e7d7909780c86b5d23dda7211111f506a13adbb538ecdf72622f5f98fdf0e491
